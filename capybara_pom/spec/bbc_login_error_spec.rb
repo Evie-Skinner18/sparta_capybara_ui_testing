@@ -18,9 +18,11 @@ describe 'Incorrect user details produces valid error' do
       #inside this bbc homepage room you can now see all the methods available for the homepage.
       @bbc_site.bbc_homepage.visit_homepage
 
-      #Click sign in SIGN_IN_LINK
+      #Click sign in
+      @bbc_site.bbc_homepage.click_sign_in_link
 
       #Fill in username on sign in page: use your random generator!
+      @bbc_site.sign_in_page.fill_username_field
 
       #Fill in password
 

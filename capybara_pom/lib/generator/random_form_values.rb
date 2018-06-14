@@ -15,7 +15,7 @@ class RandomFormValues
     @phone_num = Faker::PhoneNumber.phone_number
   end
 
-  def generate_password(8)
+  def generate_password
     @password = Faker::Internet.password
   end
 
@@ -23,4 +23,5 @@ class RandomFormValues
     @email_address = Faker::Internet.email
   end
 
-end
+
+end #end of class

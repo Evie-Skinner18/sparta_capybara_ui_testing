@@ -1,5 +1,5 @@
 require 'capybara/dsl'
-require_relative '../../generator/generator'
+require_relative '../generator/generator'
 
 
 
@@ -9,7 +9,16 @@ class BbcSignInPage
   include Capybara::DSL
 
   #page object
-  SIGN
+  USERNAME_FIELD = 'user-identifier-input'
+
+
+
+  def fill_username_field
+    @random_name = Generator.new.random_form_values.generate_first_name
+    fill_in(USERNAME_FIELD, with: "#{@random_name}")
+    puts "Now we're on the sign in page"
+  end
+
 
 
 
