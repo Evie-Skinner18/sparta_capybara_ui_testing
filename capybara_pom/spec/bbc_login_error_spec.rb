@@ -14,7 +14,8 @@ describe 'Incorrect user details produces valid error' do
 
       #That superclass is now saved in the variable @bbc_site. So now we can call the method bbc_homepage on that which
       #opens the giant door of the superclass. So now in front of you you have two smaller doors and these are your two
-      #smaller classes (which you can open by calling the methods). We want homepage class so we call .bbc_homepage. And
+      #smaller classes (which you can open by calling the methods). We want homepage class so we call .bbc_homepage. And now
+      #inside this bbc homepage room you can now see all the methods available for the homepage.
       @bbc_site.bbc_homepage.visit_homepage
 
       #Click sign in SIGN_IN_LINK

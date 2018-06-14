@@ -7,3 +7,5 @@ with Selenium
 
 Create yournew page which is a class then go into the actual page and get all the ids etc and set them up as CONSTANT VARIABLES
 in the initialize
+
+SEE BBC LOGIN ERRO SPEC FOR MY REVELATION ON CLASSES ADN SUPERCLASSES  :D

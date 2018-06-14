@@ -11,8 +11,16 @@ class RandomFormValues
     @last_name = Faker::DrWho.character
   end
 
-  def generate_
+  def generate_phone_number
+    @phone_num = Faker::PhoneNumber.phone_number
+  end
 
+  def generate_password(8)
+    @password = Faker::Internet.password
+  end
+
+  def generate_email_address
+    @email_address = Faker::Internet.email
   end
 
 end
