@@ -26,7 +26,7 @@ describe 'Incorrect user details produces valid error' do
 
       #click sign in button
 
-      #Make an assertion that the error is 'Sorry'
+      #Make an assertion that the error is 'Sorry blaba'
 
     end
 
