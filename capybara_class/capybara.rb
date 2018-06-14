@@ -1,3 +1,4 @@
+#Require the DSL one istead this time
 require 'capybara/dsl'
 
 class BbcHomepage
