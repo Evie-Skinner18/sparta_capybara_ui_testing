@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe 'Welcome to the unit tests for the Random Generators!' do
 
-  before(:each) do
+# Why is it running each test twice..?
+  before(:all) do
     @form_data_generator = RandomFormValues.new
     @random_postcode = RandomPostcodeGenerator.new
   end
@@ -18,7 +19,11 @@ describe 'Welcome to the unit tests for the Random Generators!' do
     end
 
     it "should return a phone number in a string" do
-      expect(@form_data_generator.generate_phone_number).to be_a(Integer)
+      expect(@form_data_generator.generate_phone_number).to be_a(String)
+    end
+
+    it "should return a valid email addres: that is to say, following the format of something like someone@example.co.uk" do
+      expect(@form_data_generator.generate_email_address).to include("@")
     end
 
 

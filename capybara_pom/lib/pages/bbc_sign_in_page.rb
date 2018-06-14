@@ -24,18 +24,15 @@ class BbcSignInPage
   def fill_username_field
     @invalid_username = @@random_form_generator.generate_invalid_username
     fill_in(USERNAME_FIELD, with: "#{@invalid_username}")
-    puts "Now we're on the sign in page. Username filled!"
   end
 
   def fill_password_field
     @random_password = @@random_form_generator.generate_password
     fill_in(PASSWORD_FIELD, with: "#{@random_password}")
-    puts "Password filled!"
   end
 
   def click_sign_in_button
     click_button(SIGN_IN_BUTTON)
-    puts "Sign in btn clicked"
   end
 
   def check_for_error_message
