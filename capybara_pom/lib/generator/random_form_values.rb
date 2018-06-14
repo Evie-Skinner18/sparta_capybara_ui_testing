@@ -15,6 +15,14 @@ class RandomFormValues
     @phone_num = Faker::PhoneNumber.phone_number
   end
 
+  def generate_username
+    @username = Faker::Internet.user_name
+  end
+
+  def generate_invalid_username
+    @invalid_username = Faker::Zelda.character
+  end
+
   def generate_password
     @password = Faker::Internet.password
   end

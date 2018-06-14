@@ -6,7 +6,7 @@ require 'spec_helper'
 describe 'Incorrect user details produces valid error' do
 
 #Always write your context as if it's one big test
-  context 'It should respond with the correct error when incorrect details are input' do
+  context 'It should respond with the correct error message when incorrect details are input' do
 
     it "should produce an error when inputting incorrect password to an invalid account" do
       #Instatniate the superclass in the test so we can access all the classes in our test
@@ -25,18 +25,17 @@ describe 'Incorrect user details produces valid error' do
       @bbc_site.sign_in_page.fill_username_field
 
       #Fill in password
+      @bbc_site.sign_in_page.fill_password_field
 
       #click sign in button
+      @bbc_site.sign_in_page.click_sign_in_button
 
-      #Make an assertion that the error is 'Sorry blaba'
-
+      #Make an assertion that the error is 'Sorry, we can’t find an account with that username. If you're over 13, try your email address instead or get help here.'
+      @bbc_site.sign_in_page.check_for_error_message
+      expect(@bbc_site.sign_in_page.get_error_message_value).text should match("Sorry, we can’t find an account with that username. If you're over 13, try your email address instead or <a href=\"https://www.bbc.co.uk/usingthebbc/account/im-having-problems-with-my-username\" class=\"link\">get help here</a>")
     end
 
 
-
-
   end #end of context
-
-
 
 end #end of describe
